@@ -1,0 +1,15 @@
+type Beer {
+    id: ID! @unique
+    createdAt: DateTime!
+    name: String!
+    brewery: Brewery!
+    description: String!
+  }
+
+  type Brewery {
+    id: ID! @unique
+    createdAt: DateTime!
+    name: String!
+    beers: [Beer]!
+    url: String!
+  }
